@@ -1,0 +1,23 @@
+{
+  "name": "swb.js",
+  "version": "1.0.0",
+  "description": "Simple WhatsApp Bot framework, powered by Baileys",
+  "main": "index.js",
+  "author": "Abdi Putrana Radian",
+  "license": "MIT",
+  "dependencies": {
+    "@whiskeysockets/baileys": "^6.7.18",
+    "chalk": "^4.1.2",
+    "ora": "^7.0.1",
+    "pino": "^9.7.0",
+    "qrcode-terminal": "^0.12.0"
+  },
+  "keywords": [
+    "whatsapp",
+    "bot",
+    "baileys",
+    "aoi.js",
+    "simple",
+    "framework"
+  ]
+}
