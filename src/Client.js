@@ -39,26 +39,26 @@ class SWBClient {
       const { connection, lastDisconnect, qr } = update;
 
       if (qr) {
-        Logger.info("📱 Scan QR berikut untuk login WhatsApp:");
+        Logger.info("📱 Scan the following QR to login to WhatsApp:");
         qrcode.generate(qr, { small: true });
       }
 
       if (connection === "open") {
-        Logger.success(`✅ ${this.botName} terkoneksi ke WhatsApp!`);
+        Logger.success(`✅ ${this.botName} connected to WhatsApp!`);
       }
 
       if (connection === "close") {
         const code = lastDisconnect?.error?.output?.statusCode || lastDisconnect?.error?.reason || "unknown";
-        Logger.error(`❌ Koneksi terputus (reason: ${code})`);
+        Logger.error(`❌ Connection is lost (reason: ${code})`);
 
         // Reconnect otomatis jika bukan logout manual
         if (
           lastDisconnect?.error?.output?.statusCode !== DisconnectReason.loggedOut
         ) {
-          Logger.info("🔁 Mencoba menyambung ulang...");
+          Logger.info("🔁 Trying to reconnect...");
           this.init(); // restart ulang
         } else {
-          Logger.warn("🔒 Anda telah logout. Hapus folder auth_info untuk login ulang.");
+          Logger.warn("🔒 You have been logged out. Delete the auth_info folder to re-login.");
         }
       }
     });
@@ -74,9 +74,9 @@ class SWBClient {
         "";
 
       const from = msg.key.remoteJid;
-      const sender = msg.pushName || "Pengirim";
+      const sender = msg.pushName || "Sender";
 
-      Logger.info(`📩 Command dari ${sender}: ${body}`);
+      Logger.info(`📩 Command from ${sender}: ${body}`);
 
       const command = new CommandHandler(this, msg, body, from, sender);
       await command.handle();
