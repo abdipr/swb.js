@@ -1,0 +1,11 @@
+# Ignore dependencies
+node_modules/
+
+# Optional cache & system files
+.env
+dist/
+build/
+*.log
+.DS_Store
+Thumbs.db
+.vscode/

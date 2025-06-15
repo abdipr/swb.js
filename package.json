@@ -1,0 +1,32 @@
+{
+  "name": "swb.js",
+  "version": "1.0.1",
+  "description": "A simple, beginner-friendly WhatsApp bot framework powered by Baileys. Inspired by aoi.js style command handling.",
+  "main": "index.js",
+  "author": {
+    "name": "Abdi Putrana Radian",
+    "url": "https://github.com/abdipr"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/abdipr/swb.js"
+  },
+  "bugs": {
+    "url": "https://github.com/abdipr/swb.js/issues"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@whiskeysockets/baileys": "^6.7.18",
+    "chalk": "^4.1.2",
+    "ora": "^7.0.1",
+    "pino": "^9.7.0",
+    "qrcode-terminal": "^0.12.0"
+  },
+  "keywords": [
+    "whatsapp",
+    "bot",
+    "baileys",
+    "simple",
+    "framework"
+  ]
+}
